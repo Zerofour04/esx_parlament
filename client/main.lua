@@ -242,7 +242,7 @@ function OpenParlamentActionsMenu()
 	ESX.UI.Menu.CloseAll()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'parlament_actions', {
-		title    = 'Община',
+		title    = 'Parlament',
 		align    = 'top-left',
 		elements = elements
 	}, function(data, menu)
@@ -254,15 +254,14 @@ function OpenParlamentActionsMenu()
 		elseif data.current.value == 'boss_actions' then
 			TriggerEvent('esx_society:openBossMenu', 'parlament', function(data, menu)
 				menu.close()
+				CurrentAction     = 'parlament_actions_menu'
+				CurrentActionMsg  = _U('press_to_open')
+				CurrentActionData = {}
 			end)
 		end
 
 	end, function(data, menu)
 		menu.close()
-
-		CurrentAction     = 'parlament_actions_menu'
-		CurrentActionMsg  = _U('press_to_open')
-		CurrentActionData = {}
 	end)
 end
 
@@ -270,7 +269,7 @@ function OpenMobileParlamentActionsMenu()
 	ESX.UI.Menu.CloseAll()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'mobile_parlament_actions', {
-		title    = 'Общинско меню',
+		title    = _U('parlament_title'),
 		align    = 'top-left',
 		elements = {
 			{label = _U('billing'),   value = 'billing'}
@@ -526,7 +525,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
--- Taxi Job
+-- Parlament Job
 Citizen.CreateThread(function()
 	while true do
 

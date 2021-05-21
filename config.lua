@@ -9,7 +9,11 @@ Config.EnableSocietyOwnedVehicles = false
 Config.Locale                     = 'en'
 
 Config.AuthorizedVehicles = {
-	{model = 'baller', label = 'Baller'}
+	{model = 'Schafter2', label = 'schafter2'},
+	{model = 'Schafter3', label = 'schafter3'},
+	{model = 'Schafter4', label = 'schafter4'},
+	{model = 'Schafter5', label = 'schafter5'},
+	{model = 'Schafter6', label = 'schafter6'}
 }
 
 Config.Zones = {
